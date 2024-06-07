@@ -1,0 +1,21 @@
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701,1,2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply h-16 w-32 px-3 py-1 lowercase;
+  }
+
+  .inactive-btn {
+    @apply text-gray-700 bg-white hover:shadow-btn-shadow shadow-faint-shadow focus:text-green-950;
+    transition: box-shadow 200ms ease-in-out;
+  }
+
+  .active-btn {
+    @apply bg-gray-600 text-white;
+  }
+}
