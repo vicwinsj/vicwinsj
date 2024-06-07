@@ -1,5 +1,6 @@
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701,1,2&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,6 +17,10 @@
   }
 
   .active-btn {
-    @apply bg-gray-600 text-white;
+    @apply bg-dark-green text-white;
+  }
+
+  .git-link {
+    @apply lowercase flex items-center gap-1 hover:underline;
   }
 }

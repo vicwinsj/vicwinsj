@@ -3,9 +3,13 @@ module.exports = {
   content: ["./src/**/*.{html,js,css}", "./*.html"],
   theme: {
     extend: {
+      colors: {
+        "dark-green": "#324e48",
+      },
       fontFamily: {
         general: ["General Sans", "sans-serif"],
         name: ["Tiny5", "sans-serif"],
+        victor: ["Victor Mono", "monospace"],
       },
       boxShadow: {
         "btn-shadow": "inset .01em .01em 0.1em .1em rgb(55,65,81, 1)",
