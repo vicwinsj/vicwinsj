@@ -12,12 +12,12 @@
   }
 
   .inactive-btn {
-    @apply text-gray-700 bg-white hover:shadow-btn-shadow shadow-faint-shadow focus:text-green-950;
+    @apply text-dark-green bg-gray-100 hover:shadow-btn-shadow shadow-faint-shadow;
     transition: box-shadow 200ms ease-in-out;
   }
 
   .active-btn {
-    @apply bg-dark-green text-white;
+    @apply bg-dark-green text-gray-100;
   }
 
   .git-link {

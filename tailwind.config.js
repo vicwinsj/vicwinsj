@@ -31,6 +31,9 @@ module.exports = {
         20: "20%",
         40: "40%",
       },
+      backgroundPosition: {
+        portrait: "10% 43%",
+      },
     },
   },
   plugins: [],

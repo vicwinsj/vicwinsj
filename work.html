@@ -11,72 +11,77 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="bg-dark-green font-general flex flex-col justify-center gap-24">
-    <header class="w-full flex py-48 px-0">
-      <div class="w-1/4 justify-self-start self-start">
-        <div class="h-16 bg-orange-50 flex justify-end items-end">
-          <p class="lowercase px-3 py-1 text-dark-green">Developed by</p>
+  <body
+    class="bg-gradient-to-b from-dark-green via-dark-green to-gray-100 font-general flex flex-col justify-center gap-24"
+  >
+    <header class="h-[33rem]">
+      <div
+        class="relative h-full bg-[url('/img/portrait.jpeg')] bg-portrait bg-cover w-full flex px-0"
+      >
+        <div class="z-10 w-1/3 justify-self-start self-start">
+          <div class="h-16 bg-gray-100 flex justify-end items-end">
+            <p class="lowercase px-3 py-1 text-dark-green">Developed by</p>
+          </div>
+        </div>
+        <div class="z-10 opacity-10 w-1/3 flex justify-center items-center">
+          <a
+            href="index.html"
+            class="font-general text-dark-green text-7xl uppercase font-semibold tracking-wider h-full w-[36rem] flex flex-col justify-center gap-72"
+          >
+            <div class="flex flex-col justify-items-center">
+              <p class="h-16 flex justify-end items-center gap-3 rotate-[7deg]">
+                <span class="hover:rotate-[-7deg]">V</span>
+                <span class="hover:rotate-[-7deg]">i</span>
+                <span class="hover:rotate-[-7deg]">c</span>
+                <span class="hover:rotate-[-7deg]">t</span>
+                <span class="hover:rotate-[-7deg]">o</span>
+                <span class="hover:rotate-[-7deg]">r</span>
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <p class="h-16 flex justify-end items-center gap-3">
+                <span class="hover:rotate-[-7deg]">W</span>
+                <span class="hover:rotate-[-7deg]">i</span>
+                <span class="hover:rotate-[-7deg]">n</span>
+                <span class="hover:rotate-[-7deg]">s</span>
+                <span class="hover:rotate-[-7deg]">j</span>
+                <span class="hover:rotate-[-7deg]">a</span>
+                <span class="hover:rotate-[-7deg]">n</span>
+                <span class="hover:rotate-[-7deg]">s</span>
+                <span class="hover:rotate-[-7deg]">e</span>
+                <span class="hover:rotate-[-7deg]">n</span>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="w-1/3 flex justify-center items-end">
+          <nav
+            class="z-10 w-full h-16 rounded-tl bg-gray-100 flex justify-center items-end"
+          >
+            <a href="work.html" class="btn active-btn">Work</a>
+            <a href="about.html" class="btn inactive-btn">About</a>
+            <a href="contact.html" class="btn inactive-btn">Contact</a>
+          </nav>
         </div>
       </div>
-      <div class="w-1/2 flex justify-center items-center">
-        <a
-          href="index.html"
-          class="font-victor bg-orange-50 hover:bg-orange-300 rounded-full h-[36rem] w-[36rem] flex flex-col justify-center gap-1"
-        >
-          <div
-            class="flex flex-col justify-items-center text-7xl text-dark-green uppercase font-semibold tracking-wider"
-          >
-            <p
-              class="h-16 flex justify-start items-center gap-3 rotate-[20deg]"
-            >
-              <span class="hover:rotate-[-20deg]">V</span>
-              <span class="hover:rotate-[-20deg]">i</span>
-              <span class="hover:rotate-[-20deg]">c</span>
-              <span class="hover:rotate-[-20deg]">t</span>
-              <span class="hover:rotate-[-20deg]">o</span>
-              <span class="hover:rotate-[-20deg]">r</span>
-            </p>
-          </div>
-          <div
-            class="flex flex-col text-7xl text-dark-green uppercase font-semibold tracking-wider"
-          >
-            <p class="h-16 flex items-center gap-3 rotate-[20deg]">
-              <span class="hover:rotate-[-20deg]">W</span>
-              <span class="hover:rotate-[-20deg]">i</span>
-              <span class="hover:rotate-[-20deg]">n</span>
-              <span class="hover:rotate-[-20deg]">s</span>
-              <span class="hover:rotate-[-20deg]">j</span>
-              <span class="hover:rotate-[-20deg]">a</span>
-              <span class="hover:rotate-[-20deg]">n</span>
-              <span class="hover:rotate-[-20deg]">s</span>
-              <span class="hover:rotate-[-20deg]">e</span>
-              <span class="hover:rotate-[-20deg]">n</span>
-            </p>
-          </div>
-        </a>
-      </div>
-      <div class="w-1/4 flex justify-center items-end">
-        <nav class="w-full h-16 bg-orange-50 flex justify-center items-end">
-          <a href="work.html" class="btn active-btn">Work</a>
-          <a href="about.html" class="btn inactive-btn">About</a>
-          <a href="contact.html" class="btn inactive-btn">Contact</a>
-        </nav>
-      </div>
+      <div class="h-[33rem] absolute inset-0 bg-orange-300 opacity-70"></div>
     </header>
     <main class="flex flex-col items-center gap-10">
-      <div class="bg-orange-50 p-10 flex gap-3 overflow-hidden">
-        <a
-          class="shadow-img transform transition-all duration-300 hover:scale-105 hover:shadow-img-hover"
-          href="https://norofffeu.github.io/html-css-javascript1-cross-course-assignments-vicwinsj/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="object-contain h-72"
-            src="img/rainydays.png"
-            alt="Screenshot of Rainy Days website"
-          />
-        </a>
+      <div class="bg-gray-100 p-10 flex gap-3 overflow-hidden">
+        <div class="w-full flex justify-center items-center">
+          <a
+            class="shadow-img transform transition-all duration-300 hover:scale-105 hover:shadow-img-hover"
+            href="https://norofffeu.github.io/html-css-javascript1-cross-course-assignments-vicwinsj/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="object-contain h-72"
+              src="img/rainydays.png"
+              alt="Screenshot of Rainy Days website"
+            />
+          </a>
+        </div>
         <div class="w-72 p-3 flex flex-col items-center">
           <div class="flex flex-col gap-3">
             <h1 class="uppercase text-xl font-semibold">Rainy Days</h1>
@@ -100,19 +105,21 @@
           </div>
         </div>
       </div>
-      <div class="bg-orange-50 p-10 flex gap-3 overflow-hidden">
-        <a
-          class="shadow-img transform transition-all duration-300 hover:scale-105 hover:shadow-img-hover"
-          href="https://vicwinsj.github.io/Semester-Project-1/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="object-contain h-72"
-            src="img/sci-fo.png"
-            alt="Screenshot of Science Fosen website"
-          />
-        </a>
+      <div class="bg-gray-100 p-10 flex gap-3">
+        <div class="w-full flex justify-center items-center">
+          <a
+            class="shadow-img transform transition-all duration-300 hover:scale-105 hover:shadow-img-hover"
+            href="https://vicwinsj.github.io/Semester-Project-1/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="object-contain h-72"
+              src="img/sci-fo.png"
+              alt="Screenshot of Science Fosen website"
+            />
+          </a>
+        </div>
         <div class="w-72 p-3 flex flex-col items-center">
           <div class="flex flex-col gap-3">
             <h1 class="uppercase text-xl font-semibold">Science Fosen</h1>
@@ -136,19 +143,21 @@
           </div>
         </div>
       </div>
-      <div class="bg-orange-50 p-10 flex gap-3 overflow-hidden">
-        <a
-          class="shadow-img transform transition-all duration-300 hover:scale-105 hover:shadow-img-hover"
-          href="https://norofffeu.github.io/FED1-PE1-vicwinsj/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            class="object-contain h-72"
-            src="img/spasiba.png"
-            alt="Screenshot of Spasiba website"
-          />
-        </a>
+      <div class="bg-gray-100 p-10 flex gap-3 overflow-hidden">
+        <div class="w-full flex justify-center items-center">
+          <a
+            class="shadow-img transform transition-all duration-300 hover:scale-105 hover:shadow-img-hover"
+            href="https://norofffeu.github.io/FED1-PE1-vicwinsj/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="object-contain h-72"
+              src="img/spasiba.png"
+              alt="Screenshot of Spasiba website"
+            />
+          </a>
+        </div>
         <div class="w-72 p-3 flex flex-col items-center">
           <div class="flex flex-col gap-3">
             <h1 class="uppercase text-xl font-semibold">Spasiba</h1>
