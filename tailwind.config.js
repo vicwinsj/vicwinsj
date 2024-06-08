@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "dark-green": "#324e48",
+        "dark-mint": "#137a63",
+        ginger: "#b06500",
       },
       fontFamily: {
         general: ["General Sans", "sans-serif"],
@@ -37,7 +38,7 @@ module.exports = {
       scale: {
         125: "1.25",
         150: "1.5",
-        600: "6",
+        700: "7",
       },
     },
   },

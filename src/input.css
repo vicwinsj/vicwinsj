@@ -8,16 +8,15 @@
 
 @layer components {
   .btn {
-    @apply h-16 w-32 px-3 py-1 lowercase;
+    @apply text-center h-16 w-32 lowercase hover:text-white;
   }
 
   .inactive-btn {
-    @apply text-dark-green bg-gray-100 hover:shadow-btn-shadow shadow-faint-shadow;
-    transition: box-shadow 200ms ease-in-out;
+    @apply bg-transparent text-dark-mint border-y-4 border-solid border-dark-mint;
   }
 
   .active-btn {
-    @apply bg-transparent text-gray-100;
+    @apply text-black bg-dark-mint border-y-4 border-solid border-dark-mint focus:text-black;
   }
 
   .git-link {
