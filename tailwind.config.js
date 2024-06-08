@@ -12,7 +12,7 @@ module.exports = {
         victor: ["Victor Mono", "monospace"],
       },
       boxShadow: {
-        "btn-shadow": "inset .01em .01em 0.1em .1em rgb(55,65,81, 1)",
+        "btn-shadow": "inset .01em .01em 0.1em .1em black",
         "faint-shadow": "inset 0 0 0 0 rgba(0, 0, 0, 0)",
         "img-hover": ".1em .1em 1em .3em rgb(55,65,81, 1)",
         img: ".1em .1em .3em .1em rgb(55,65,81, 1)",
@@ -33,6 +33,11 @@ module.exports = {
       },
       backgroundPosition: {
         portrait: "10% 43%",
+      },
+      scale: {
+        125: "1.25",
+        150: "1.5",
+        600: "6",
       },
     },
   },

@@ -17,7 +17,7 @@
   }
 
   .active-btn {
-    @apply bg-dark-green text-gray-100;
+    @apply bg-transparent text-gray-100;
   }
 
   .git-link {
