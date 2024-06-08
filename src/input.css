@@ -8,7 +8,7 @@
 
 @layer components {
   .btn {
-    @apply text-center h-16 w-32 lowercase hover:text-white;
+    @apply text-center h-16 w-32 lowercase hover:text-white focus:text-gray-300;
   }
 
   .inactive-btn {
@@ -16,7 +16,7 @@
   }
 
   .active-btn {
-    @apply text-black bg-dark-mint border-y-4 border-solid border-dark-mint focus:text-black;
+    @apply text-black bg-dark-mint border-y-4 border-solid border-dark-mint;
   }
 
   .git-link {
