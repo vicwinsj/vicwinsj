@@ -1,1 +1,4 @@
-# portfolio
+- 🙋 Hi, I'm Victor!
+- 🏃 I’m working on improving myself
+- 📖 I’m studying Front-end Development online
+- 📧 Reach out to me at [LinkedIn](https://www.linkedin.com/in/victor-winsjansen-71773a83/)
