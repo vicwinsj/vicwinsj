@@ -1,16 +1,17 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Quicksand, Caladea } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const caladea = Caladea({
+  variable: "--font-caladea",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-radial-[circle_at_50%_90%]! from-ginger/50 via-ginger/30 sm:via-ginger/10 to-background/70 flex flex-col gap-30 items-center min-h-dvh text-foreground font-sans ${quicksand.variable} ${caladea.variable} antialiased`}
       >
         <Header />
         {children}

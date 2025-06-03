@@ -1,3 +1,3 @@
 export default function ContactPage() {
-  return <main></main>;
+  return <main className="max-w-[var(--max-w-content)] w-full"></main>;
 }
