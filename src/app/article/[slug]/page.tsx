@@ -1,56 +1,29 @@
-"use client";
-
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowUpFromBracket,
-  faWindowRestore,
-  faArrowLeft,
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/form/Button";
 import { projects } from "@/data/projects";
-import { useRouter } from "next/navigation";
+import { notFound } from "next/navigation";
+import { GoBackButton } from "@/components/form/GoBackButton";
+import { OpenSiteButton } from "@/components/form/OpenSiteButton";
+import { OpenRepoButton } from "@/components/form/OpenRepoButton";
 
-type PageProps = {
-  params: { slug: string };
+type ArticlePageProps = {
+  params: Promise<{ slug: string }>;
 };
 
-export default function ProjectPage({ params }: PageProps) {
-  const router = useRouter();
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
-  const project = projects.find((p) => p.slug === params.slug);
-
-  if (!project) return <div>Project not found.</div>;
-
-  const handleOpenSite = () => {
-    if (project.siteLink) {
-      window.open(project.siteLink, "_blank");
-    }
-  };
-
-  const handleOpenRepo = () => {
-    if (project.repoLink) {
-      window.open(project.repoLink, "_blank");
-    }
-  };
-
-  const handleGoBack = () => {
-    router.back();
-  };
+  if (!project) notFound();
 
   return (
     <main className="flex flex-col items-center justify-center px-1 sm:px-10 h-full max-w-[var(--content-w)] w-full">
       <article className="flex flex-col bg-background/30 p-6 sm:p-10 rounded-xl gap-6 sm:gap-10 items-center w-full">
         {/* Go Back, Title & Share Button */}
         <section className="w-full flex flex-col-reverse gap-6 sm:flex-row justify-between items-end sm:items-center">
-          <Button
-            onClick={handleGoBack}
-            variant="outline"
-            className="flex capitalize items-center gap-3"
-          >
-            <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>Go back
-          </Button>
+          <GoBackButton />
           <h1 className="text-start w-fit text-xl sm:text-3xl">
             {project.title}
           </h1>
@@ -72,29 +45,8 @@ export default function ProjectPage({ params }: PageProps) {
             </strong>
 
             <div className="w-full flex gap-3 items-center">
-              <Button
-                onClick={handleOpenSite}
-                className="flex items-center gap-3"
-              >
-                <FontAwesomeIcon
-                  className="size-3"
-                  icon={faWindowRestore}
-                  size="lg"
-                ></FontAwesomeIcon>
-                Live site
-              </Button>
-              <Button
-                onClick={handleOpenRepo}
-                className="flex items-center gap-3"
-                variant="secondary"
-              >
-                <FontAwesomeIcon
-                  className="size-3"
-                  icon={faGithub}
-                  size="lg"
-                ></FontAwesomeIcon>
-                GitHub repo
-              </Button>
+              <OpenSiteButton siteLink={project.siteLink} />
+              <OpenRepoButton repoLink={project.repoLink} />
             </div>
           </div>
 
