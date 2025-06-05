@@ -10,7 +10,7 @@ export type ProjectProps = {
     short: string;
     detailed: string;
   };
-  content?: string;
+  mainContent?: string[];
   articleLink?: Url;
   siteLink?: string;
   repoLink?: string;

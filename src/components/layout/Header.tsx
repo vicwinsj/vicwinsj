@@ -10,8 +10,8 @@ export default function Header() {
 
   return (
     <header className="bg-radial-[circle_at_0%_10%]! from-racing-green/30 via-transparent to:transparent relative max-w-[var(--content-w)] h-[620px] sm:h-[800px] flex flex-col justify-center gap-15 items-center w-full">
-      <nav className="relative mb-20 self-end w-99/100 sm:w-11/12 xl:w-9/12 h-30 pt-3 pl-3 bg-foreground/10 flex flex-col justify-between items-end sm:items-center gap-3 text-foreground/70 capitalize text-xl rounded-tl-3xl overflow-clip">
-        <div className="w-11/12 h-1/2 sm:h-7/10 rounded-bl-xl absolute top-0 left-10 sm:left-15 xl:left-20 bg-radial-[circle_at_10%_50%] from-ginger/30 via-ginger/10 to-transparent" />
+      <nav className="relative mb-20 self-end w-99/100 sm:w-10/12 lg:w-9/12 h-30 pt-3 pl-3 bg-foreground/10 flex flex-col justify-between items-end md:items-center gap-3 text-foreground/70 capitalize text-xl rounded-tl-3xl overflow-clip">
+        <div className="w-11/12 h-1/2 sm:h-7/10 rounded-bl-xl absolute top-0 left-10 sm:left-15 bg-radial-[circle_at_10%_50%] backdrop-blur-xs from-ginger/30 via-ginger/10 to-transparent" />
         <strong className="text-transparent bg-ginger bg-clip-text mix-blend-screen z-20 uppercase flex gap-3 tracking-widest w-fit text-[26px] sm:text-3xl lg:text-5xl h-fit">
           Victor Winsjansen
         </strong>

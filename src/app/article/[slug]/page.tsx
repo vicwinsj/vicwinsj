@@ -5,40 +5,53 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUpFromBracket,
   faWindowRestore,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Button } from "@/components/form/Button";
 import { projects } from "@/data/projects";
+import { useRouter } from "next/navigation";
 
 type PageProps = {
   params: { slug: string };
 };
 
 export default function ProjectPage({ params }: PageProps) {
+  const router = useRouter();
+
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) return <div>Project not found.</div>;
 
-  const handleOpenSite = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
+  const handleOpenSite = () => {
     if (project.siteLink) {
       window.open(project.siteLink, "_blank");
     }
   };
 
-  const handleOpenRepo = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
+  const handleOpenRepo = () => {
     if (project.repoLink) {
       window.open(project.repoLink, "_blank");
     }
   };
 
+  const handleGoBack = () => {
+    router.back();
+  };
+
   return (
     <main className="flex flex-col items-center justify-center px-1 sm:px-10 h-full max-w-[var(--content-w)] w-full">
       <article className="flex flex-col bg-background/30 p-6 sm:p-10 rounded-xl gap-6 sm:gap-10 items-center w-full">
-        {/* Title & Share Button */}
+        {/* Go Back, Title & Share Button */}
         <section className="w-full flex flex-col-reverse gap-6 sm:flex-row justify-between items-end sm:items-center">
-          <h1 className="text-start w-full text-xl sm:text-3xl">
+          <Button
+            onClick={handleGoBack}
+            variant="outline"
+            className="flex capitalize items-center gap-3"
+          >
+            <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>Go back
+          </Button>
+          <h1 className="text-start w-fit text-xl sm:text-3xl">
             {project.title}
           </h1>
           <Button className="flex items-center gap-3" variant="outline">
@@ -73,6 +86,7 @@ export default function ProjectPage({ params }: PageProps) {
               <Button
                 onClick={handleOpenRepo}
                 className="flex items-center gap-3"
+                variant="secondary"
               >
                 <FontAwesomeIcon
                   className="size-3"
@@ -90,7 +104,7 @@ export default function ProjectPage({ params }: PageProps) {
                 <Image
                   src={project.image.url}
                   alt={project.image.alt}
-                  className="object-cover size-full"
+                  className="object-top object-cover size-full"
                 ></Image>
               </div>
               <p className="pt-3 italic text-md bg-foreground/10">
@@ -102,8 +116,16 @@ export default function ProjectPage({ params }: PageProps) {
 
         {/* Main Content, Improvements, Reflections */}
         <section className="flex flex-col gap-3 w-full">
-          <h2 className="w-full text-xl">Reflection</h2>
-          <p className="font-serif">{project.content}</p>
+          <h2 className="w-full text-xl">My Reflections</h2>
+          {Array.isArray(project.mainContent) && (
+            <>
+              {project.mainContent.map((paragraph) => (
+                <p className="font-serif" key={paragraph}>
+                  {paragraph}
+                </p>
+              ))}
+            </>
+          )}
         </section>
       </article>
     </main>

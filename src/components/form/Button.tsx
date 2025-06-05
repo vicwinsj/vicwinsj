@@ -2,8 +2,9 @@ import { ButtonProps } from "@/types/button";
 
 const variantClasses = {
   primary:
-    "bg-racing-green/30 text-white/70 border-1 border-racing-green/30 hover:border-racing-green/40 hover:text-white/90 hover:bg-racing-green/40",
-  secondary: "",
+    "bg-racing-green/30 text-foreground/70 border-1 border-racing-green/30 hover:border-racing-green/40 hover:text-foreground/90 hover:bg-racing-green/40",
+  secondary:
+    "bg-foreground/30 text-background/70 border-1 border-foreground/30 hover:border-foreground/40 hover:text-background/90 hover:bg-foreground/40",
   outline:
     "bg-transparent border-ginger/30 border-1 text-white/70 hover:bg-ginger/10 hover:text-white/90 hover:border-ginger/40",
 };
