@@ -2,11 +2,11 @@ import { ButtonProps } from "@/types/button";
 
 const variantClasses = {
   primary:
-    "bg-racing-green/30 text-foreground/70 border-1 border-racing-green/30 hover:border-racing-green/40 hover:text-foreground/90 hover:bg-racing-green/40",
+    "bg-racing-green/60 text-foreground/80 hover:text-foreground/90 hover:bg-racing-green/70",
   secondary:
-    "bg-foreground/30 text-background/70 border-1 border-foreground/30 hover:border-foreground/40 hover:text-background/90 hover:bg-foreground/40",
+    "bg-background/80 text-foreground/80 border-1 border-background/80 hover:border-background-90 hover:text-foreground/90 hover:bg-background/90",
   outline:
-    "bg-transparent border-ginger/30 border-1 text-white/70 hover:bg-ginger/10 hover:text-white/90 hover:border-ginger/40",
+    "bg-transparent border-ginger/20 border-1 text-foreground/80 hover:bg-ginger/10 hover:text-foreground/90 hover:border-ginger/10",
 };
 
 const sizeClasses = {

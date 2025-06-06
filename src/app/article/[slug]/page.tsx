@@ -18,7 +18,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <main className="flex flex-col items-center justify-center px-1 sm:px-10 h-full max-w-[var(--content-w)] w-full">
-      <article className="flex flex-col bg-background/30 p-6 sm:p-10 rounded-xl gap-6 sm:gap-10 items-center w-full">
+      <article className="flex flex-col bg-background/10 p-6 sm:p-10 rounded-xl gap-6 sm:gap-10 items-center w-full">
         {/* Go Back, Title & Share Button */}
         <section className="w-full flex flex-col gap-6 sm:gap-10 justify-between">
           <div className="flex justify-between">
@@ -36,7 +36,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         {/* Description, Links & Image */}
         <section className="w-full flex flex-col sm:flex-row border-y-[.1px] border-foreground/30 py-6 sm:py-10 gap-6 sm:gap-10">
           <div className="flex flex-col gap-6 sm:gap-10 flex-1 w-full h-fit">
-            <strong className="font-serif flex-1 w-full text-xl sm:text-2xl">
+            <strong className="flex-1 w-full text-xl sm:text-2xl">
               {project.description.detailed}
             </strong>
 
@@ -66,13 +66,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <section className="flex flex-col gap-3 w-full">
           <h2 className="w-full text-xl">My Reflections</h2>
           {Array.isArray(project.mainContent) && (
-            <>
+            <div className="h-full columns-2 gap-6 space-y-4">
               {project.mainContent.map((paragraph) => (
-                <p className="font-serif" key={paragraph}>
+                <p className="font-serif " key={paragraph}>
                   {paragraph}
                 </p>
               ))}
-            </>
+            </div>
           )}
         </section>
       </article>

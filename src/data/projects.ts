@@ -34,7 +34,7 @@ export const projects = [
     siteLink: "https://fyke.netlify.app/",
     description: {
       short:
-        "This e-commerce store lets you search through products add adding them to cart before checking out.",
+        "This e-commerce store lets you search through products and adding them to cart before checking out.",
       detailed:
         "The Fyke website was an attempt to make a modern e-commerce store using React with Styled Components. Here you can search for a specific product using the search bar, add products to the cart and place an order when finished.",
     },

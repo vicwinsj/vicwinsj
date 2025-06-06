@@ -39,3 +39,9 @@ h3 {
 button {
   @apply cursor-pointer;
 }
+
+/* Menu */
+
+.menu-button {
+  @apply border-transparent w-full h-fit border-b-3 transition-colors duration-300 hover:text-foreground;
+}
