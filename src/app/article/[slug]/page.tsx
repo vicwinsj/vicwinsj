@@ -1,12 +1,10 @@
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "@/components/form/Button";
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { GoBackButton } from "@/components/form/GoBackButton";
 import { OpenSiteButton } from "@/components/form/OpenSiteButton";
 import { OpenRepoButton } from "@/components/form/OpenRepoButton";
+import ShareButton from "@/components/form/ShareButton";
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -22,19 +20,17 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     <main className="flex flex-col items-center justify-center px-1 sm:px-10 h-full max-w-[var(--content-w)] w-full">
       <article className="flex flex-col bg-background/30 p-6 sm:p-10 rounded-xl gap-6 sm:gap-10 items-center w-full">
         {/* Go Back, Title & Share Button */}
-        <section className="w-full flex flex-col-reverse gap-6 sm:flex-row justify-between items-end sm:items-center">
-          <GoBackButton />
+        <section className="w-full flex flex-col gap-6 sm:gap-10 justify-between">
+          <div className="flex justify-between">
+            <GoBackButton />
+            <ShareButton
+              title={project.title}
+              description={project.description}
+            />
+          </div>
           <h1 className="text-start w-fit text-xl sm:text-3xl">
             {project.title}
           </h1>
-          <Button className="flex items-center gap-3" variant="outline">
-            <FontAwesomeIcon
-              icon={faArrowUpFromBracket}
-              size="sm"
-              className="size-3"
-            ></FontAwesomeIcon>
-            Share
-          </Button>
         </section>
 
         {/* Description, Links & Image */}

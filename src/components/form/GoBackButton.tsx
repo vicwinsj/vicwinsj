@@ -18,7 +18,8 @@ export const GoBackButton = () => {
       variant="outline"
       className="flex capitalize items-center gap-3"
     >
-      <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>Go back
+      <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+      Go back
     </Button>
   );
 };
