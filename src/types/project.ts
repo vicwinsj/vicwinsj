@@ -14,4 +14,5 @@ export type ProjectProps = {
   articleLink?: Url;
   siteLink?: string | URL | undefined;
   repoLink?: string;
+  shareLink?: string;
 };

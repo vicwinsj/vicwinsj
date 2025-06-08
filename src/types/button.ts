@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "transparent" | "outline";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;

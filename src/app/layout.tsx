@@ -3,6 +3,8 @@ import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
 import { Quicksand, Caladea } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
+import { BASE_URL } from "@/constants/url";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -15,9 +17,21 @@ const caladea = Caladea({
   subsets: ["latin"],
 });
 
+const title = "Victor Winsjansen | Portfolio";
+const description = "Portfolio of frond end developer Victor Winsjansen.";
+
 export const metadata: Metadata = {
-  title: "Victor Winsjansen | Portfolio",
-  description: "Portfolio",
+  title: title,
+  description: description,
+  openGraph: {
+    title: title,
+    description: description,
+    url: BASE_URL,
+  },
+  twitter: {
+    title: title,
+    description: description,
+  },
   icons: {
     icon: [
       { url: "/assets/favicons/favicon.ico" },
@@ -44,11 +58,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-linear-to-t! from-ginger/50 via-ginger/30 to-ginger/10 flex flex-col gap-30 items-center min-h-dvh text-foreground font-sans ${quicksand.variable} ${caladea.variable} antialiased`}
+        className={`bg-radial-[ellipse_at_50%_50%]! from-ginger/50 via-ginger/30 to-ginger/10 flex flex-col gap-30 items-center min-h-dvh text-foreground font-sans ${quicksand.variable} ${caladea.variable} antialiased`}
       >
         <Header />
         {children}
         <Footer />
+        <Toaster position="bottom-center" />
       </body>
     </html>
   );

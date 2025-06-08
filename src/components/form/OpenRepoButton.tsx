@@ -16,7 +16,7 @@ export const OpenRepoButton = ({ repoLink }: ProjectProps) => {
     <Button
       onClick={handleOpenRepo}
       className="flex items-center gap-3"
-      variant="secondary"
+      variant="outline"
     >
       <FontAwesomeIcon
         className="size-3"

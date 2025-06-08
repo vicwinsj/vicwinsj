@@ -30,7 +30,7 @@ export const ProjectCard = ({
             </div>
 
             <div className="h-full flex flex-col gap-3">
-              <h2 className="text-xl">{title}</h2>
+              <h3 className="text-xl">{title}</h3>
               <p className=" ">{description?.short}</p>
             </div>
           </article>

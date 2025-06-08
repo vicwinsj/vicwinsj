@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="p-10 max-w-[var(--content-w)] text-white w-full flex flex-col gap-10 items-center">
       <Button
         className="flex items-center gap-3"
-        variant="outline"
+        variant="transparent"
         onClick={ScrollToTop}
       >
         <FontAwesomeIcon
@@ -21,9 +21,8 @@ export default function Footer() {
           size="sm"
           className="size-3"
         ></FontAwesomeIcon>
-        To top
       </Button>
-      <p className="text-xs">©Victor Winsjansen 2025</p>
+      <p className="text-xs">©2025 Victor Winsjansen</p>
     </footer>
   );
 }

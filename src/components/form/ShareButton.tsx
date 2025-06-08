@@ -8,40 +8,54 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { ProjectProps } from "@/types/project";
+import toast from "react-hot-toast";
+import { Toaster } from "../utilities/Toaster";
+import { BASE_URL } from "@/constants/url";
 
-export default function ShareButton({ title, description }: ProjectProps) {
+export default function ShareButton({
+  title,
+  description,
+  shareLink,
+}: ProjectProps) {
   const [copied, setCopied] = useState(false);
 
-  const handleShare = async () => {
+  const handleShare = () => {
     const shareData = {
-      title: title,
-      text: description?.short,
-      url: window.location.href,
+      title: title ? title : "Untitled Project | Victor Winsjansen",
+      text: description?.short ? description?.short : "No description found.",
+      url: shareLink ? shareLink : BASE_URL,
     };
 
     if (navigator.share) {
       try {
-        await navigator.share(shareData);
+        navigator.share(shareData);
       } catch (err) {
-        console.error("Sharing failed", err);
+        if (err) {
+          toast.custom(<Toaster error={true} message="Sharing failed" />);
+          console.error("Sharing failed", err);
+        }
+      }
+    } else if (navigator.clipboard) {
+      try {
+        navigator.clipboard.writeText(shareData.url);
+        setCopied(true);
+        toast.custom(<Toaster message="Link copied to clipboard!" />);
+        setTimeout(() => setCopied(false), 3000);
+      } catch (err) {
+        if (err) {
+          toast.custom(<Toaster error={true} message="Failed to copy link!" />);
+          console.error("Failed to copy link", err);
+        }
       }
     } else {
-      try {
-        await navigator.clipboard.writeText(shareData.url);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-      } catch (err) {
-        console.error("Clipboard copy failed", err);
-      }
+      toast.custom(
+        <Toaster error={true} message="Sharing failed. Try again later." />
+      );
     }
   };
 
   return (
-    <Button
-      className="flex items-center gap-3"
-      variant="outline"
-      onClick={handleShare}
-    >
+    <Button variant="transparent" onClick={handleShare}>
       {copied ? (
         <>
           <FontAwesomeIcon
@@ -49,7 +63,6 @@ export default function ShareButton({ title, description }: ProjectProps) {
             size="sm"
             className="size-3"
           ></FontAwesomeIcon>
-          Copied link!
         </>
       ) : (
         <>
@@ -58,7 +71,6 @@ export default function ShareButton({ title, description }: ProjectProps) {
             size="sm"
             className="size-3"
           ></FontAwesomeIcon>
-          Share
         </>
       )}
     </Button>

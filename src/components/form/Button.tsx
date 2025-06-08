@@ -2,11 +2,11 @@ import { ButtonProps } from "@/types/button";
 
 const variantClasses = {
   primary:
-    "bg-racing-green/60 text-foreground/80 hover:text-foreground/90 hover:bg-racing-green/70",
-  secondary:
-    "bg-background/80 text-foreground/80 border-1 border-background/80 hover:border-background-90 hover:text-foreground/90 hover:bg-background/90",
+    "bg-racing-green/70 text-foreground/90 border-1 border-racing-green/70 hover:border-racing-green hover:text-foreground hover:bg-racing-green focus:shadow-inner-xl focus:shadow-[inset_0_10px_10px_rgba(255,255,255,1)]",
+  transparent:
+    "h-9! bg-transparent text-foreground/90 hover:text-foreground hover:bg-foreground/10 focus:bg-foreground/20",
   outline:
-    "bg-transparent border-ginger/20 border-1 text-foreground/80 hover:bg-ginger/10 hover:text-foreground/90 hover:border-ginger/10",
+    "bg-transparent border-foreground/40 border-1 text-foreground/90 hover:text-foreground hover:border-foreground/70 focus:bg-racing-green/10",
 };
 
 const sizeClasses = {
@@ -24,7 +24,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`capitalize h-fit whitespace-nowrap rounded-md font-semibold transition-colors duration-300 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={`flex capitalize items-center gap-3 h-fit whitespace-nowrap rounded-md font-semibold transition-colors duration-300 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
       {...props}
     >
       {children}

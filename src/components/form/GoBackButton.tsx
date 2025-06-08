@@ -13,13 +13,8 @@ export const GoBackButton = () => {
   };
 
   return (
-    <Button
-      onClick={handleGoBack}
-      variant="outline"
-      className="flex capitalize items-center gap-3"
-    >
+    <Button onClick={handleGoBack} variant="transparent">
       <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
-      Go back
     </Button>
   );
 };

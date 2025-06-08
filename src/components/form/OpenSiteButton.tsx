@@ -13,7 +13,7 @@ export const OpenSiteButton = ({ siteLink }: ProjectProps) => {
   };
 
   return (
-    <Button onClick={handleOpenSite} className="flex items-center gap-3">
+    <Button onClick={handleOpenSite}>
       <FontAwesomeIcon
         className="size-3"
         icon={faWindowRestore}
