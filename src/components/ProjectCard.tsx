@@ -12,9 +12,9 @@ export const ProjectCard = ({
     <>
       {articleLink && (
         <Link
-          title="Click to open full article"
+          title="Click to open article"
           href={articleLink}
-          className="w-full h-full sm:h-110 bg-background/30 hover:bg-background/50 hover:scale-101 rounded-xl overflow-hidden"
+          className="w-full h-full bg-background/30 hover:bg-background/50 hover:scale-101 rounded-xl overflow-hidden"
         >
           <article className="relative w-full h-full flex flex-col gap-6 sm:gap-10 p-6 sm:p-10 text-foreground">
             <div className="absolute inset-0 w-full h-full sm:active:bg-racing-green/10"></div>

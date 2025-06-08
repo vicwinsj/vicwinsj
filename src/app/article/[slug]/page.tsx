@@ -23,7 +23,7 @@ export async function generateMetadata({
   const url = `${ARTICLE_URL}/${slug}`;
 
   return {
-    title: project.title,
+    title: project.title + " | Victor Winsjansen",
     description: project.description.short,
     openGraph: {
       title: project.title,

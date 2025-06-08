@@ -5,7 +5,7 @@ import HolidazeScreenshot from "@/assets/img/holidaze.png";
 export const projects = [
   {
     id: 1,
-    title: "Semester Project 2 | HammerPrice",
+    title: "Semester Project 2 (HammerPrice)",
     slug: "semester-project-2",
     repoLink: "https://github.com/vicwinsj/Semester-Project-2",
     siteLink: "https://semester-project-2-vicwinsj.netlify.app/",
@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "JavaScript Frameworks | Fyke",
+    title: "JavaScript Frameworks (Fyke)",
     slug: "javascript-frameworks",
     repoLink: "https://github.com/vicwinsj/javascript-frameworks",
     siteLink: "https://fyke.netlify.app/",
@@ -50,7 +50,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Project Exam 2 | Holidaze",
+    title: "Project Exam 2 (Holidaze)",
     slug: "project-exam-2",
     repoLink: "https://github.com/vicwinsj/Project-Exam-2",
     siteLink: "https://project-exam-2-holidaze-vicwinsj.netlify.app/",
