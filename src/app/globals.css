@@ -24,6 +24,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -33,15 +37,29 @@ body {
 h1,
 h2,
 h3 {
-  @apply font-semibold;
+  @apply font-semibold text-2xl;
 }
+
+/* Form */
 
 button {
   @apply cursor-pointer;
 }
 
-/* Menu */
+textarea {
+  @apply resize-none;
+}
 
-.menu-button {
-  @apply border-transparent w-full h-fit border-b-3 transition-colors duration-300 hover:text-foreground;
+/* Images */
+
+.img-border {
+  @apply border-10 border-foreground/10 rounded-md;
+}
+
+.page-bg {
+  @apply bg-background/30 p-6 sm:p-10 rounded-xl;
+}
+
+.main-page {
+  @apply flex flex-col gap-6 sm:gap-10 px-1 sm:px-10 max-w-[var(--content-w)] w-full;
 }

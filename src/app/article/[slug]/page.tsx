@@ -45,8 +45,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   if (!project) notFound();
 
   return (
-    <main className="flex flex-col items-center justify-center px-1 sm:px-10 h-full max-w-[var(--content-w)] w-full">
-      <article className="flex flex-col bg-background/30 p-6 sm:p-10 rounded-xl gap-6 sm:gap-10 items-center w-full">
+    <main className="main-page items-center justify-center">
+      <article className="flex flex-col page-bg gap-6 sm:gap-10 items-center w-full">
         {/* Go Back, Title & Share Button */}
         <section className="w-full flex flex-col gap-6 sm:gap-10 justify-between">
           <div className="flex justify-between">
@@ -76,7 +76,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
 
           {project.image && (
-            <div className="flex-2 w-full flex flex-col border-10 border-foreground/10 rounded-md h-full overflow-hidden">
+            <div className="flex-2 w-full flex flex-col img-border h-full overflow-hidden">
               <div className="w-full h-full">
                 <Image
                   src={project.image.url}
@@ -97,10 +97,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           {Array.isArray(project.mainContent) && (
             <div className="h-full sm:columns-2 gap-6 space-y-4">
               {project.mainContent.map((paragraph) => (
-                <p
-                  className="font-serif tracking-tight leading-relaxed text-justify"
-                  key={paragraph}
-                >
+                <p className="" key={paragraph}>
                   {paragraph}
                 </p>
               ))}

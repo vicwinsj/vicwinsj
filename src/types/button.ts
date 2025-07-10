@@ -1,4 +1,5 @@
 export type ButtonProps = {
+  asChild?: boolean;
   variant?: "primary" | "transparent" | "outline";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;

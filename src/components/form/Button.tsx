@@ -1,8 +1,10 @@
+import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@/lib/utils";
 import { ButtonProps } from "@/types/button";
 
 const variantClasses = {
   primary:
-    "bg-racing-green/70 text-foreground/90 border-1 border-racing-green/70 hover:border-racing-green hover:text-foreground hover:bg-racing-green focus:shadow-inner-xl focus:shadow-[inset_0_10px_10px_rgba(255,255,255,1)]",
+    "bg-racing-green/70 text-foreground/90 border-1 border-racing-green/70 hover:border-racing-green hover:text-foreground hover:bg-racing-green focus:bg-racing-green/30",
   transparent:
     "h-9! bg-transparent text-foreground/90 hover:text-foreground hover:bg-foreground/10 focus:bg-foreground/20",
   outline:
@@ -20,14 +22,22 @@ export const Button = ({
   size = "md",
   children,
   className,
+  asChild,
   ...props
 }: ButtonProps) => {
+  const Comp = asChild ? Slot : "button";
+
   return (
-    <button
-      className={`flex capitalize items-center gap-3 h-fit whitespace-nowrap rounded-md font-semibold transition-colors duration-300 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+    <Comp
+      className={cn(
+        "flex capitalize items-center gap-3 h-fit whitespace-nowrap rounded-md font-semibold transition-colors duration-300",
+        variantClasses[variant],
+        sizeClasses[size],
+        className
+      )}
       {...props}
     >
       {children}
-    </button>
+    </Comp>
   );
 };

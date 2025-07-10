@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-radial-[ellipse_at_50%_50%]! from-ginger/50 via-ginger/30 to-ginger/10 flex flex-col gap-30 items-center min-h-dvh text-foreground font-sans ${quicksand.variable} ${caladea.variable} antialiased`}
+        className={`bg-radial-[ellipse_at_50%_50%]! from-ginger/40 via-ginger/30 to-ginger/20 flex flex-col gap-10 items-center min-h-dvh text-foreground font-sans ${quicksand.variable} ${caladea.variable} antialiased`}
       >
         <Header />
         {children}

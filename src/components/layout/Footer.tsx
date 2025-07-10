@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="p-10 max-w-[var(--content-w)] text-white w-full flex flex-col gap-10 items-center">
+    <footer className="p-10 max-w-[var(--content-w)] h-fit text-white w-full flex flex-col gap-10 items-center">
       <Button
         className="flex items-center gap-3"
         variant="transparent"
